@@ -1,3 +1,4 @@
 /source/gulp
 .prettierrc
 dev.sh
+.gitignore
