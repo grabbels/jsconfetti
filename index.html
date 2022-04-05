@@ -1,0 +1,171 @@
+<!-- <div class="canvas">
+<svg style="width:200px;height:200px" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon points="0,0 100,0 100,100 0,100" />
+</svg>
+</div> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap"
+            rel="stylesheet"
+        />
+        <script src="source/js/jsconfetti.js"></script>
+        <script src="https://unpkg.com/vanilla-picker@2"></script>
+        <link rel="stylesheet" href="compiled/css/style.min.css" />
+        <script src="https://unpkg.com/akar-icons-fonts"></script>
+    </head>
+
+    <body>
+        <div class="generator_controls">
+            <div class="controls_inner">
+                <h1 style="display: inline-block; margin-right: .5rem">jsConfetti</h1>
+                <p style="display: inline-block">v0.1.1</p>
+                <div class="container buttons">
+                    <div class="button regen" onclick="generateParticles()">
+                        <i class="ai-arrow-counter-clockwise"></i> Regenerate
+                    </div>
+                    <div class="button reset" onclick="resetSettings()">
+                        <i class="ai-arrow-back"></i> Reset
+                    </div>
+                </div>
+                <div class="container buttons">
+                    <div class="button export" style="text-align: center" onclick="exportPDF()">
+                        <i class="ai-download"></i> Download as PDF
+                    </div>
+                </div>
+                <div class="container" id="color">
+                    <h3>Color</h3>
+                    <div class="container_inner">
+                        <p>Background</p>
+                        <div class="color_container background">
+                            <!-- <div class="background_picker"></div> -->
+                        </div>
+                        <p>Particles</p>
+                        <div class="color_container usercolors">
+                            <!-- <div class="color_picker" id="color_1" style="background-color:#C9BAAB;"></div>
+                        <div class="color_picker" id="color_2" style="background-color:#FF0039;"></div>
+                        <div class="color_picker" id="color_3" style="background-color:#FFD300;"></div>
+                        <div class="color_picker" id="color_4" style="background-color:#005C2C;"></div>
+                        <div class="color_picker" id="color_5" style="background-color:#0077C0;"></div>
+                        <div class="color_picker" id="color_6" style="background-color:#160061;"></div>
+                        <div class="color_picker" id="color_7" style="background-color:#FF5200;"></div> -->
+                            <div class="color_add">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="particle">
+                    <h3>Particles</h3>
+                    <div class="container_inner">
+                        <label for="particle_number">Particle count</label>
+                        <div class="slider_container">
+                            <input
+                                type="range"
+                                min="20"
+                                max="5000"
+                                value="1000"
+                                class="slider"
+                                name="particle_number"
+                                id="particle_number"
+                                onchange="generateParticles()"
+                            /><input
+                                id="particle_number_text"
+                                value="1000"
+                                class="text particle_number_text"
+                                onchange="updateSlider()"
+                            />
+                        </div>
+                    </div>
+                    <div class="container_inner">
+                        <label for="particle_shape">Particle shape</label>
+                        <i class="ai-chevron-down"></i>
+                        <select
+                            name="particle_shape"
+                            id="particle_shape"
+                            onchange="generateParticles()"
+                        >
+                            <option value="poly" selected="selected">
+                                Polygon
+                            </option>
+                            <option value="circle">Circle</option>
+                            <option value="square">Square</option>
+                            <option value="tri">Triangle</option>
+                        </select>
+                    </div>
+                    <div class="container_inner">
+                        <label for="particle_size">Particle size</label>
+                        <div class="slider_container">
+                            <input
+                                type="range"
+                                min="1"
+                                max="100"
+                                value="20"
+                                class="slider"
+                                name="particle_size"
+                                id="particle_size"
+                                onchange="generateParticles()"
+                            /><input
+                                id="particle_size_text"
+                                value="20"
+                                class="text particle_size_text"
+                                onchange="updateSlider()"
+                            />
+                        </div>
+                    </div>
+                    <div class="container_inner">
+                        <label for="particle_variation"
+                            >Particle size variation</label
+                        >
+                        <div class="slider_container">
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="50"
+                                class="slider"
+                                name="particle_variation"
+                                id="particle_variation"
+                                onchange="generateParticles()"
+                            />
+                            <input
+                                id="particle_variation_text"
+                                value="50"
+                                class="text particle_variation_text"
+                                onchange="updateSlider()"
+                            />
+                        </div>
+                    </div>
+                    <div class="container_inner">
+                        <label for="dist_origin">Origin</label>
+                        <fieldset class="radio">
+                            <input
+                                type="radio"
+                                name="dist_origin"
+                                value="center"
+                                id="center"
+                                checked="checked"
+                                onchange="generateParticles()"
+                            />
+                            <label for="center">Center</label><br />
+                            <input
+                                type="radio"
+                                name="dist_origin"
+                                value="spread"
+                                id="spread"
+                                onchange="generateParticles()"
+                            />
+                            <label for="spread">Spread</label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="container" id="presets">
+                    <h3>Presets</h3>
+                </div>
+            </div>
+        </div>
+        <div class="canvas"></div>
+    </body>
+</html>
