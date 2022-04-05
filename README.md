@@ -6,4 +6,4 @@ Play around with the live editor here: [confetti.semhak.dev](https://confetti.se
 ## To-do
 - Implementing presets
 - Implementing export to PDF to open and edit in programs like Affinity Designer or Adobe Illustrator
-- Mobile/responsive interface layout
+- Fixing Safari support (distribution: spread)

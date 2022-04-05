@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -20,9 +21,12 @@
     </head>
 
     <body>
+        <div class="canvas"></div>
         <div class="generator_controls">
             <div class="controls_inner">
-                <h1 style="display: inline-block; margin-right: .5rem">jsConfetti</h1>
+                <h1 style="display: inline-block; margin-right: 0.5rem">
+                    jsConfetti
+                </h1>
                 <p style="display: inline-block">v0.1.1</p>
                 <div class="container buttons">
                     <div class="button regen" onclick="generateParticles()">
@@ -33,7 +37,11 @@
                     </div>
                 </div>
                 <div class="container buttons">
-                    <div class="button export" style="text-align: center" onclick="exportPDF()">
+                    <div
+                        class="button export"
+                        style="text-align: center"
+                        onclick="exportPDF()"
+                    >
                         <i class="ai-download"></i> Download as PDF
                     </div>
                 </div>
@@ -166,6 +174,5 @@
                 </div>
             </div>
         </div>
-        <div class="canvas"></div>
     </body>
 </html>
