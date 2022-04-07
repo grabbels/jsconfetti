@@ -6,4 +6,15 @@ Play around with the live editor here: [confetti.semhak.dev](https://confetti.se
 ## To-do
 - Implementing presets
 - Implementing export to PDF to open and edit in programs like Affinity Designer or Adobe Illustrator
+- Implementing export canvas as HTML to use generated confetti-field in your own projects
+- Improve particle distribution to match particle count better
 - Fixing Safari support (distribution: spread)
+
+## Changelog
+**V0.1.2**
+- Added "string" and "flake" particle shapes
+- Layout made responsive to work on smaller screens
+- Added favicon
+
+**V0.1.1**
+- Initial publish
