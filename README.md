@@ -3,6 +3,8 @@ This is an explorative project for me to challenge myself in javascript codewrit
 
 Play around with the live editor here: [confetti.semhak.dev](https://confetti.semhak.dev)
 
+Enjoy playing around with this or just appreciate what I do? [Buy me a coffee](https://paypal.me/nielshak)!
+
 ## To-do
 - Adding documentation in JS code
 - Implementing presets
