@@ -4,6 +4,7 @@ This is an explorative project for me to challenge myself in javascript codewrit
 Play around with the live editor here: [confetti.semhak.dev](https://confetti.semhak.dev)
 
 ## To-do
+- Adding documentation in JS code
 - Implementing presets
 - Implementing export to PDF to open and edit in programs like Affinity Designer or Adobe Illustrator
 - Implementing export canvas as HTML to use generated confetti-field in your own projects
