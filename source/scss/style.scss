@@ -116,11 +116,21 @@ label {
     // font-weight: bold;
 }
 
-img.icon {
-    height: 15px;
-    width: 15px;
-    display: inline-block;
+hr {
+    width: 40px;
+    height: 1px;
+    margin-left: 0;
 }
+
+a {
+    color: $blue;
+    text-decoration: underline;
+    transition: 0.05s;
+    &:hover {
+        color: darken($blue, 20%);
+    }
+}
+
 .canvas {
     position: absolute;
     height: 100vh;
@@ -133,6 +143,8 @@ img.icon {
     }
 }
 .generator_controls {
+    max-height: 80vh;
+    overflow-y: auto;
     z-index: 10;
     position: fixed;
     left: 2vw;
@@ -160,12 +172,12 @@ img.icon {
                 margin-top: 0.5rem;
                 position: relative;
                 i {
-                        &.ai-chevron-down {
-                            position: absolute;
-                            right: 10px;
-                            top: 27px;
-                        }
+                    &.ai-chevron-down {
+                        position: absolute;
+                        right: 10px;
+                        top: 27px;
                     }
+                }
                 .color_container {
                     display: flex;
                     justify-content: flex-start;
@@ -173,7 +185,7 @@ img.icon {
                     gap: 0.3rem;
                     z-index: 2;
                     flex-wrap: wrap;
-                    
+
                     .background_picker {
                         // background-color: $dark;
                         width: 30px;
@@ -349,7 +361,7 @@ img.icon {
                     input {
                         display: inline-block;
                         // margin-bottom: 0.3rem;
-                        margin-right: .5rem;
+                        margin-right: 0.5rem;
                         appearance: none;
                         width: 16px;
                         height: 16px;
@@ -379,18 +391,18 @@ img.icon {
             }
             &.buttons {
                 display: flex;
-                gap: .5rem;
-                 @media only screen and (max-width: 600px) {
-                     flex-wrap: wrap;
-                     gap: 0;
-                     margin-bottom: 0;
-                 }
+                gap: 0.5rem;
+                @media only screen and (max-width: 600px) {
+                    flex-wrap: wrap;
+                    gap: 0;
+                    margin-bottom: 0;
+                }
                 .button {
                     user-select: none;
                     cursor: pointer;
                     border-radius: 4px;
                     border: solid 1px $dark;
-                    padding: .5rem .5rem .6rem;
+                    padding: 0.5rem 0.5rem 0.6rem;
                     color: $dark;
                     display: inline-block;
                     flex-grow: 1;
@@ -399,7 +411,7 @@ img.icon {
                     background-color: white;
                     @media only screen and (max-width: 600px) {
                         text-align: center;
-                        margin-bottom: .5rem;
+                        margin-bottom: 0.5rem;
                         width: 100%;
                     }
                     &:hover {
@@ -425,7 +437,6 @@ img.icon {
                         }
                     }
                     i {
-                        
                     }
                 }
             }

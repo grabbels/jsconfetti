@@ -517,6 +517,52 @@ function generateParticles() {
                     currentColors[classNum] +
                     '" /></svg>'
             });
+        } else if (particleShape === 'flake') {
+            var rotate = getRndFloat(0, 360);
+            var newElem = Object.assign(document.createElement('div'), {
+                id: i,
+                innerHTML:
+                    '<svg  style="transform:rotate(' +
+                    rotate +
+                    'deg)translate(' +
+                    translate +
+                    'px)scale(' +
+                    scale +
+                    ', ' +
+                    scale +
+                    ');width:' +
+                    particleSize +
+                    'px;height:' +
+                    particleSize +
+                    'px;position:absolute;' +
+                    absolutePosition +
+                    ';" viewBox="0 0 100 100"><g transform="matrix(0.635666,0,0,0.738224,-236.426,-111.892)" style="fill: ' +
+                    currentColors[classNum] +
+                    '"><path d="M477.774,281.061C490.233,274.799 504.305,271.293 519.19,271.293C552.855,271.293 582.332,289.325 598.553,316.22C635.442,377.383 702.534,418.279 779.091,418.279C816.995,418.279 852.572,408.236 883.324,390.696L934.639,361.427L876.102,258.797L824.787,288.065C811.307,295.754 795.706,300.128 779.091,300.128C745.425,300.128 715.949,282.096 699.727,255.2C662.839,194.038 595.747,153.142 519.19,153.142C485.232,153.142 453.144,161.207 424.718,175.493L371.933,202.021L424.99,307.589L477.774,281.061Z" /></g></svg>'
+            });
+        } else if (particleShape === 'string') {
+            var rotate = getRndFloat(0, 360);
+            var newElem = Object.assign(document.createElement('div'), {
+                id: i,
+                innerHTML:
+                    '<svg  style="transform:rotate(' +
+                    rotate +
+                    'deg)translate(' +
+                    translate +
+                    'px)scale(' +
+                    scale +
+                    ', ' +
+                    scale +
+                    ');width:' +
+                    particleSize +
+                    'px;height:' +
+                    particleSize +
+                    'px;position:absolute;' +
+                    absolutePosition +
+                    ';" viewBox="0 0 358 171" ><g id="Artboard1" transform="matrix(1,0,0,0.861075,0,0)">< rect x="0" y="0" width="357.693" height="197.497" style="fill:none;" /><clipPath id="_clip1"><rect x="0" y="0" width="357.693" height="197.497"/></clipPath><g clip-path="url(#_clip1)"><g transform="matrix(0.635666,0,0,0.738224,-236.426,-111.892)" style="fill: ' +
+                    currentColors[classNum] +
+                    '"><path d="M477.774,281.061C490.233,274.799 504.305,271.293 519.19,271.293C552.855,271.293 582.332,289.325 598.553,316.22C635.442,377.383 702.534,418.279 779.091,418.279C816.995,418.279 852.572,408.236 883.324,390.696L934.639,361.427L876.102,258.797L824.787,288.065C811.307,295.754 795.706,300.128 779.091,300.128C745.425,300.128 715.949,282.096 699.727,255.2C662.839,194.038 595.747,153.142 519.19,153.142C485.232,153.142 453.144,161.207 424.718,175.493L371.933,202.021L424.99,307.589L477.774,281.061Z" /></g></g></g></svg>'
+            });
         }
 
         canvas.appendChild(newElem);
@@ -539,5 +585,5 @@ function generateParticles() {
 }
 
 function exportPDF() {
-
+    alert('Coming soon!')
 }
