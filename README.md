@@ -16,7 +16,6 @@ Enjoy playing around with this or just appreciate what I do? [Buy me a coffee](h
 
 ## Changelog
 *V0.1.2*
-- Initial publish
 - Added "string" and "flake" particle shapes
 - Layout made responsive to work on smaller screens
 - Added favicon
