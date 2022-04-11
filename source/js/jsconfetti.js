@@ -43,7 +43,7 @@ function setURLSearchParam(key, value) {
     //function to add queries to URL and update it without page reload
     const url = new URL(window.location.href);
     url.searchParams.set(key, value);
-    window.history.pushState({ path: url.href }, '', url.href);
+    window.history.replaceState({ path: url.href }, '', url.href);
 }
 
 function rgbToHex(orig) {
@@ -569,7 +569,7 @@ function generateParticles() {
     });
     const url = new URL(window.location.href);
     cleanUrl = url.href.split('?')[0];
-    window.history.pushState('', '', cleanUrl);
+    window.history.replaceState('', '', cleanUrl);
     window.currentColors = currentColors;
     window.bgcolor = bgcolor;
     setURLSearchParam('count', particle_number);
