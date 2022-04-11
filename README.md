@@ -3,7 +3,10 @@ This is an explorative project for me to challenge myself in javascript codewrit
 
 Play around with the live editor here: [confetti.semhak.dev](https://confetti.semhak.dev)
 
+Enjoy playing around with this or just appreciate what I do? [Buy me a coffee](https://paypal.me/nielshak)!
+
 ## To-do
+- Adding documentation in JS code
 - Implementing presets
 - Implementing export to PDF to open and edit in programs like Affinity Designer or Adobe Illustrator
 - Implementing export canvas as HTML to use generated confetti-field in your own projects
@@ -13,7 +16,6 @@ Play around with the live editor here: [confetti.semhak.dev](https://confetti.se
 
 ## Changelog
 *V0.1.2*
-- Initial publish
 - Added "string" and "flake" particle shapes
 - Layout made responsive to work on smaller screens
 - Added favicon
