@@ -169,6 +169,7 @@ function setVars() {
 function initColor() {
     //select required nodes and remove still present color pickers
     var backgroundPicker = document.querySelector('.background_picker');
+    var controls = document.querySelector('.generator_controls');
     if (backgroundPicker) {
         backgroundPicker.remove();
     }
@@ -188,6 +189,10 @@ function initColor() {
     });
     document.body.style.backgroundColor = bgcolor;
     backgroundPicker.style.backgroundColor = bgcolor;
+    picker.onOpen = function () {
+        controls.style.overflowX = 'visible';
+        controls.style.overflowY = 'clip';
+    }
     //set background color of page and picker square itself to match color of the picker
     picker.onDone = function (color) {
         // console.log(color.rgbaString)
@@ -200,6 +205,8 @@ function initColor() {
         }
         bgcolor = backgroundPicker.style.backgroundColor;
         window.bgcolor = bgcolor;
+        controls.style.overflowX = 'unset';
+        controls.style.overflowY = 'auto';
         initColor();
     };
     var colorsContainer = document.querySelector('.usercolors');
@@ -220,6 +227,7 @@ function initColor() {
         );
     });
     var colorPickers = document.querySelectorAll('.usercolors .color_picker');
+    
     colorPickers.forEach(function (el, i) {
         var picker = new Picker({
             parent: el,
@@ -231,6 +239,10 @@ function initColor() {
             el.style.border = 'solid 1px black';
         }
         //on color picker confirm reset colors array and push the updated color to the array together with the still present colors
+        picker.onOpen = function() {
+            controls.style.overflowX = 'visible';
+            controls.style.overflowY = 'clip';
+        }
         picker.onDone = function (color) {
             el.style.backgroundColor = color.hex;
             currentColors = [];
@@ -241,6 +253,8 @@ function initColor() {
                 currentColors.push(el.style.backgroundColor);
             });
             //run intial function after populating array
+            controls.style.overflowX = 'unset';
+            controls.style.overflowY = 'auto';
             initColor();
         };
     });
@@ -330,6 +344,7 @@ function resetSettings() {
     document.getElementById('particle_size_text').value = 20;
     document.getElementById('particle_variation').value = 50;
     document.getElementById('particle_variation_text').value = 50;
+    document.getElementById('particle_shape').value = 'poly';
     document.getElementById('center').checked = true;
     initColor();
     generateParticles();
