@@ -15,6 +15,9 @@ Enjoy playing around with this or just appreciate what I do? [Buy me a coffee](h
 - Improve settings-retention/URL-updating on change
 
 ## Changelog
+*V0.1.3*
+- replaced pushState() with replaceState() as to not clutter browser history on every URL update
+
 *V0.1.2*
 - Added "string" and "flake" particle shapes
 - Layout made responsive to work on smaller screens
