@@ -15,6 +15,10 @@ Enjoy playing around with this or just appreciate what I do? [Buy me a coffee](h
 - Improve settings-retention/URL-updating on change
 
 ## Changelog
+*V0.1.4*
+- Color picker now escapes container instead of disappearing into container bounds
+- Particle shape now also resets when using the reset button
+
 *V0.1.3*
 - replaced pushState() with replaceState() as to not clutter browser history on every URL update
 
