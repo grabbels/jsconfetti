@@ -13,6 +13,7 @@ Enjoy playing around with this or just appreciate what I do? [Buy me a coffee](h
 - Improve particle distribution to match particle count better
 - Fixing Safari support (distribution: spread)
 - Improve settings-retention/URL-updating on change
+- Encrypt URL-settings into a shorter code
 
 ## Changelog
 *V0.1.4*
