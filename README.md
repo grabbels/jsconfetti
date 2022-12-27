@@ -16,6 +16,9 @@ Enjoy playing around with this or just appreciate what I do? [Buy me a coffee](h
 - Encrypt URL-settings into a shorter code
 
 ## Changelog
+*V0.1.5*
+- Added particle animations on generate, such wow
+
 *V0.1.4*
 - Color picker now escapes container instead of disappearing into container bounds
 - Particle shape now also resets when using the reset button
