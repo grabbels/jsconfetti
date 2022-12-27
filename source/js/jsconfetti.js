@@ -404,8 +404,8 @@ function generateParticles() {
             }
             var absolutePosition = 'top:50%;left:50%';
         } else if (particleOrigin === 'spread') {
-            var ranPosNumberOne = getRndFloat(-100, 100);
-            var ranPosNumberTwo = getRndFloat(-100, 100);
+            var ranPosNumberOne = getRndFloat(-4, 100);
+            var ranPosNumberTwo = getRndFloat(-4, 100);
             var translate = '0px, 0';
             var absolutePosition =
                 'top:' + ranPosNumberOne + '%;left:' + ranPosNumberTwo + '%';
@@ -445,15 +445,7 @@ function generateParticles() {
             var newElem = Object.assign(document.createElement('div'), {
                 id: i,
                 innerHTML:
-                    '<svg  style="transform:translate(' +
-                    translate +
-                    'px)scale(' +
-                    getRndFloat(20, 150) +
-                    '%, ' +
-                    getRndFloat(20, 150) +
-                    '%) rotate(' +
-                    getRndFloat(0, 360) +
-                    'deg);width:' +
+                    '<svg  style="width:' +
                     particleSize +
                     'px;height:' +
                     particleSize +
@@ -468,18 +460,35 @@ function generateParticles() {
                     '" points="' +
                     polygonPoints +
                     '" /></g></svg>'
+                    // '<svg  style="transform:translate(' +
+                    // translate +
+                    // 'px)scale(' +
+                    // getRndFloat(20, 150) +
+                    // '%, ' +
+                    // getRndFloat(20, 150) +
+                    // '%) rotate(' +
+                    // getRndFloat(0, 360) +
+                    // 'deg);width:' +
+                    // particleSize +
+                    // 'px;height:' +
+                    // particleSize +
+                    // 'px;position:absolute;' +
+                    // absolutePosition +
+                    // ';" viewBox="0 0 100 100" preserveAspectRatio="none"><g style="transform:scale(' +
+                    // scale +
+                    // ', ' +
+                    // scale +
+                    // ' "><polygon style="fill: ' +
+                    // currentColors[classNum] +
+                    // '" points="' +
+                    // polygonPoints +
+                    // '" /></g></svg>'
             });
         } else if (particleShape === 'circle') {
             var newElem = Object.assign(document.createElement('div'), {
                 id: i,
                 innerHTML:
-                    '<svg  style="transform:translate(' +
-                    translate +
-                    'px)scale(' +
-                    scale +
-                    ', ' +
-                    scale +
-                    ');width:' +
+                    '<svg  style="width:' +
                     particleSize +
                     'px;height:' +
                     particleSize +
@@ -493,13 +502,7 @@ function generateParticles() {
             var newElem = Object.assign(document.createElement('div'), {
                 id: i,
                 innerHTML:
-                    '<svg  style="transform:translate(' +
-                    translate +
-                    'px)scale(' +
-                    scale +
-                    ', ' +
-                    scale +
-                    ');width:' +
+                    '<svg  style="width:' +
                     particleSize +
                     'px;height:' +
                     particleSize +
@@ -514,15 +517,7 @@ function generateParticles() {
             var newElem = Object.assign(document.createElement('div'), {
                 id: i,
                 innerHTML:
-                    '<svg  style="transform:rotate(' +
-                    rotate +
-                    'deg)translate(' +
-                    translate +
-                    'px)scale(' +
-                    scale +
-                    ', ' +
-                    scale +
-                    ');width:' +
+                    '<svg  style="width:' +
                     particleSize +
                     'px;height:' +
                     particleSize +
@@ -537,15 +532,7 @@ function generateParticles() {
             var newElem = Object.assign(document.createElement('div'), {
                 id: i,
                 innerHTML:
-                    '<svg  style="transform:rotate(' +
-                    rotate +
-                    'deg)translate(' +
-                    translate +
-                    'px)scale(' +
-                    scale +
-                    ', ' +
-                    scale +
-                    ');width:' +
+                    '<svg  style="width:' +
                     particleSize +
                     'px;height:' +
                     particleSize +
@@ -560,15 +547,7 @@ function generateParticles() {
             var newElem = Object.assign(document.createElement('div'), {
                 id: i,
                 innerHTML:
-                    '<svg  style="transform:rotate(' +
-                    rotate +
-                    'deg)translate(' +
-                    translate +
-                    'px)scale(' +
-                    scale +
-                    ', ' +
-                    scale +
-                    ');width:' +
+                    '<svg  style="width:' +
                     particleSize +
                     'px;height:' +
                     particleSize +
@@ -581,6 +560,72 @@ function generateParticles() {
         }
 
         canvas.appendChild(newElem);
+        setTimeout(function(){
+            // newElem.querySelector('svg').classList.add('show');
+            if (particleShape === 'poly') {
+                newElem.querySelector('svg').style.transform = 'translate(' +
+                        translate +
+                        'px)scale(' +
+                        getRndFloat(20, 150) +
+                        '%, ' +
+                        getRndFloat(20, 150) +
+                        '%) rotate(' +
+                        getRndFloat(0, 360) +
+                        'deg)';
+            }
+            else if (particleShape === 'circle') {
+                newElem.querySelector('svg').style.transform = 'translate(' +
+                    translate +
+                    'px)scale(' +
+                    scale +
+                    ', ' +
+                    scale +
+                    ')';
+            }
+            else if (particleShape === 'square') {
+                newElem.querySelector('svg').style.transform = 'translate(' +
+                    translate +
+                    'px)scale(' +
+                    scale +
+                    ', ' +
+                    scale +
+                    ')';
+            }
+            else if (particleShape === 'tri') {
+                newElem.querySelector('svg').style.transform = 'rotate(' +
+                    rotate +
+                    'deg)translate(' +
+                    translate +
+                    'px)scale(' +
+                    scale +
+                    ', ' +
+                    scale +
+                    ')';
+            }
+            else if (particleShape === 'flake') {
+                newElem.querySelector('svg').style.transform = 'rotate(' +
+                    rotate +
+                    'deg)translate(' +
+                    translate +
+                    'px)scale(' +
+                    scale +
+                    ', ' +
+                    scale +
+                    ')';
+            }
+            else if (particleShape === 'string') {
+                newElem.querySelector('svg').style.transform = 'rotate(' +
+                    rotate +
+                    'deg)translate(' +
+                    translate +
+                    'px)scale(' +
+                    scale +
+                    ', ' +
+                    scale +
+                    ')';
+            }
+        }, 100);
+        
     });
     const url = new URL(window.location.href);
     cleanUrl = url.href.split('?')[0];

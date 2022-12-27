@@ -139,6 +139,12 @@ a {
     top: 0;
     left: 0;
     overflow: hidden;
+    div {
+        svg {
+            transition: transform .4s;
+            transform: translate(0,0) scale(0);
+        }
+    }
     @media only screen and (max-width: 1023px) {
         position: relative;
     }
